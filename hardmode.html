@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="hardstyle.css">
+    <title>Hard Level</title>
+</head>
+<body>
+    <h1>Hard Mode</h1>
+
+    <div hidden id="timer">
+        <h2 id="timeLabel">Time: </h2>
+        <h2 id="timeCounter"></h2>
+    </div>
+
+    <div id="score">
+        <h2 id="pointLabel">Goodluck!</h2>
+        <h2 id="scoreLabel"></h2>
+    </div>
+
+    <div id="gameboard">
+        <input hidden type="image" src="target.png" id="target" onclick="targetClicked()">
+    </div>
+
+        <button id="startButton" onclick="startGame()">Start</button>
+
+    <div hidden id="tryagainDIV">
+        <a href="hardmode.html" class="tryagainButtons">
+            <button id="tryagainButton" class="tryagainButtons">Try Again!</button>
+        </a>
+        <a href="index.html" class="tryagainButtons">
+            <button id="changeDifficultyButton" class="tryagainButtons">Change Difficulty</button>
+        </a>
+    </div>
+
+    <script>
+
+        var score = 0;
+        var timer = 10;
+
+        function startGame() {
+        
+            //get rid of start button
+            var x = document.getElementById("startButton");
+                if (x.style.display === "none") {
+                     x.style.display = "block";
+                } 
+                else {
+                    x.style.display = "none";
+                }
+
+            //add points and score to screen
+            document.getElementById("pointLabel").innerHTML = "Points:";
+            document.getElementById("scoreLabel").innerHTML = score;
+            
+            //add target to screen
+            document.getElementById("target").style.display = "block";
+
+            //add timer to screen
+            document.getElementById("timeCounter").innerHTML = timer;
+            document.getElementById("timer").style.display = "block";
+
+            //timer
+            setInterval(function() {
+                if (timer > 0){
+                timer--;
+                }
+                else {
+                    gameEnd();
+                }
+                document.getElementById("timeCounter").innerHTML = timer;
+            }, 1000)
+            
+        }
+
+        function targetClicked() {
+            score++;
+            document.getElementById("scoreLabel").innerHTML = score;
+
+            moveTarget();
+        }
+
+        function moveTarget() {
+            
+        }
+
+        function gameEnd() {
+
+            document.getElementById("scoreLabel").innerHTML = "You scored " + score + " points!";
+            document.getElementById("tryagainDIV").style.display = "block";
+
+            //clear screen
+            document.getElementById("timer").style.display = "none";
+            document.getElementById("pointLabel").style.display = "none";
+            document.getElementById("gameboard").style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>

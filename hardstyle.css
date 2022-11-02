@@ -1,0 +1,117 @@
+*{
+    margin: 5px;
+    padding: 5px;
+}
+
+html {
+    background-color: darkred;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: crosshair;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    display: inline;
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+
+    margin-left: 825px;
+    margin-right: 825px;
+    background-color: darkgray;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#gameboard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    width: 1200px;
+    height: 500px;
+    background-color: darkgray;
+}
+
+#target {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 50%);
+}
+
+#startButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+
+    width: 150px;
+    height: 55px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    background-color: darkgrey;
+}
+
+#startButton:hover {
+    background-color: gray;
+    transition: 0.5s;
+}
+
+#tryagainButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+
+    width: 200px;
+    height: 55px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    background-color: darkgrey;
+}
+
+#tryagainButton:hover {
+    background-color: gray;
+    transition: 0.5s;
+}
+
+#changeDifficultyButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+
+    width: 300px;
+    height: 55px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    background-color: darkgrey;
+}
+
+#changeDifficultyButton:hover {
+    background-color: gray;
+    transition: 0.5s;
+}
+
+.tryagainButtons {
+    text-decoration: none;
+}
