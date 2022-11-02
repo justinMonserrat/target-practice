@@ -38,7 +38,7 @@
     <script>
 
         var score = 0;
-        var timer = 10;
+        var timer = 15;
 
         function startGame() {
         
@@ -82,8 +82,14 @@
             moveTarget();
         }
 
+        function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+        }
+
         function moveTarget() {
-            
+            const randX = getRandomInt(1000);
+            const randY = getRandomInt(450);
+            document.getElementById("target").style.transform = `translate(${randX}%, ${randY}%)`;
         }
 
         function gameEnd() {
